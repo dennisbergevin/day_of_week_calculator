@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <head>
+      <title>Day of Week Calculator</title>
+      <link href="style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <section id="container">
+      <h1>Day of Week Calculator</h1>
+      <h2>
+        Instructions: Calculate day of week by entering month, day, and year.
+      </h2>
+      <div id="inputContainer">
+        <div id="monthContainer">
+          <select name="month" id="monthForm" onblur="interpret()">
+            <option value="month">Month</option>
+            <option value="00">January</option>
+            <option value="01">February</option>
+            <option value="02">March</option>
+            <option value="03">April</option>
+            <option value="04">May</option>
+            <option value="05">June</option>
+            <option value="06">July</option>
+            <option value="07">August</option>
+            <option value="08">September</option>
+            <option value="09">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+          </select>
+        </div>
+        <div id="dayContainer">
+          <select name="Day" id="dayForm">
+            <option value="00">Day</option>
+          </select>
+        </div>
+        <div id="yearContainer">
+          <input
+            name="year"
+            type="number"
+            min="0000"
+            max="2020"
+            value=""
+            placeholder="Year"
+            id="yearForm"
+          />
+        </div>
+        <div id="buttonContainer">
+          <button onclick="getDay()" id="buttonDisplay">Submit</button>
+        </div>
+      </div>
+      <br />
+      <div id="dayDisplayContainer">
+        <h3>Answer:</h3>
+        <p id="dayDisplay"></p>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
